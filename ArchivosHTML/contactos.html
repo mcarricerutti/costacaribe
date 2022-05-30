@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Playfair+Display:ital@1&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,600&family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,600&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Costa Caribe | Contactos</title>
+</head>
+<body class=" otros">
+    <!--CABECERA LOGO, BARRA NABEGACION-->
+      <section class="cabecera">
+  
+          <header class="cabecera__logo">
+  
+              <h1 class="cabecera__nombre">
+                  Costa Caribe
+              </h1>
+  
+              <nav class="cabecera__navegacion">
+                  <ul>
+                      <li><a href="/index.html">INICIO</a>  </li>
+                      <li><a href="/ArchivosHTML/menu.html">MENU</a>  </li>
+                      <li> <a href="/ArchivosHTML/contactos.html"><span class="color">CONTACTOS</span></a> </li>
+                      <li> <a href="/ArchivosHTML/nosostros.html">NOSOTROS</a> </li>
+                      <li> <a href="/ArchivosHTML/ubicación.html">DONDE UBICARNOS</a> </li>
+                  </ul>    
+              </nav>
+
+              <nav class="cabecera__navegacionD">
+                <!--<a href="#"><i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>-->
+                <ul>
+                    
+                <li><a href="/index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                <li><a href="/ArchivosHTML/menu.html"><i class="fa fa-cutlery" aria-hidden="true"></i>
+
+                </a>  </li>
+                <li> <a href="/ArchivosHTML/contactos.html"><span class="color"><i class="fa fa-user" aria-hidden="true"></i></span></i>
+                </a> </li>
+                <li> <a href="/ArchivosHTML/nosostros.html"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                </a> </li>
+                <li> <a href="/ArchivosHTML/ubicación.html"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                </a> </li>
+            </ul>    
+        </nav>
+          </header>
+      </section>
+
+      <section class="contactos">
+
+        <div class="contactos__reservacion">
+            <form action="#" method="get" enctype="multipart/form-data">
+                <fieldset class="contactos__form">Informacion personal:
+                    <legend>RESERVACIONES</legend>
+
+                    <p>
+                        <label for="nombre">Nombre
+                            <input type="text" name="nombre" id="nombre">
+                            </label>
+                    </p>
+                    <p>
+                        <label for="apellido">Apellido
+                            <input type="text" name="apellido" id="apellido">
+                            </label>
+                    </p>
+
+                    <p>
+                        <label for="fecha">Fecha
+                            <input type="date" name="fecha" id="fecha">
+                            </label>
+                        
+                        
+                    </p>
+                    <p>
+                        <label for="hora">Hora
+                            <input type="time" name="hora" id="hora">
+                            <label>
+                    </p>
+
+                    <p>
+                        Lugar de la reservación
+                    </p>
+                    <p>
+                        <label for="salon">Salón
+                            <input type="radio" name="lugar" id="salon" value="salon">
+                            </label>
+                        
+                       
+                    </p>
+                    <p>
+                        <label for="terraza">Terraza
+                            <input type="radio" name="lugar" id="terraza" value="terraza">
+                            </label>
+                    </p>
+
+                    <p>
+                        <label for="numPersonas">Numero de personas
+                            <input type="number" name="personas" id="numPersonas">
+                        </label>
+                    </p>
+
+                    <p>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                        
+                    </p>
+                </fieldset>  
+            </form>
+        </div>
+
+        <div class="facturas">
+            <p>
+                FACTURACION
+            </p>
+            <p>
+                Envía un correo electronico con tus datos    personales dando clic en el icono: 
+                <a target="blanck" href="mailto:guerreiro1ggg@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            </p>
+            <p>
+                O nos puedes envíar una imagen que contengan <br> tus datos personales y tu Ticket de consumo, <br> y nosotros te enviamos tu factura
+                        
+            </p>
+            
+            <form action="#" method="get" enctype="multipart/form-data">
+                <fieldset>Escoje un archivo con tus Datos personales: 
+                    
+
+                    <p>
+                      <label for="file">
+                         <input type="file" name="file" id="file">
+                            <button type="submit">Enviar</button>
+                       
+                      </label>
+                     </p>        
+                    
+                </fieldset>
+            </form>
+        </div>
+          
+
+        <div class="redesSociales">
+            <p>¡Siguenos en nuestros redes sociales</p>
+            <ul>
+                <li><a target="blank" href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> </li>
+                <li><a target="blank" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
+                <li>  <a target="blank" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> </li>
+                <li><a target="blank" href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
+            </ul>
+        </div>
+            
+    </section>
+
+      </section>
+            
+       
+
+    <footer>
+        &copy;<span>José Santiago Vázquez Todos los derechos reservados </span>
+    </footer>
+</body>
+</html>
