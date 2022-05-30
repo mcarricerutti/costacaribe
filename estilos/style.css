@@ -1,0 +1,873 @@
+/*
+ULTIMA MODIFICACION:  AGREGANDO EL RESPOSIVE A TODAS LAS PAGINAS
+*/
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fontU: 'Krub', sans-serif;
+    --fontD: 'Playfair Display', serif;
+    --fontT: 'Roboto Mono', monospace;
+    --fontC: 'Staatliches', cursive;
+    --color:#4ae7ff;
+
+}
+body{
+    background-color: rgb(241, 237, 231);
+}
+/* cabecera, logo y barra navegacion*/
+.cabecera{
+    position:fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    margin-left:0 ;
+    margin-right: 0;
+    border-bottom: 1px solid transparent;
+}
+.cabecera__logo{
+    width: 90%;
+    margin: auto;
+}
+.cabecera__nombre{
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    color: #0f206c;
+    font-family: var(--fontU);
+}
+/*la classe COLOR mantiene el color negro en la barra de navegacion*/
+.color{
+    color: black;
+}
+/*--------------------*/
+.cabecera__navegacion{
+    margin-top: -25px;
+}
+.cabecera__navegacion ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+.cabecera__navegacion ul li {
+    text-decoration: none;
+}
+.cabecera__navegacion ul li a{
+   text-decoration: none;
+   font-size: 1rem;
+   font-weight: bold;
+   font-family: var(--fontT);
+   transition: .5s;
+}
+/* contenido magenes y video que contienen la pagina de la pagina INDEX*/
+.contenido{
+    width: 95%;
+    margin: 100px auto 30px auto;
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+
+    grid-template-areas: 
+                "video imagenes"
+                "texto imagenes";
+}
+
+.contenido__video{
+    width: 100%;
+    height: 90%;
+
+    grid-area: video;
+}
+
+.contenido__video iframe{
+    width: 90%;
+    height: 80%;
+    margin: calc(10% / 2);
+    
+}
+
+.parrafo{
+    width: 100%;
+    height: 100%;
+
+    grid-area: texto;
+}
+.parrafo p{
+    font-size: 2.5rem;
+    font-family: var(--fontC);
+}
+.contenido__imagen{
+    width: 100%;
+
+    grid-area: imagenes;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contenido__imagen img{
+    border-radius: 5px;
+    width: 45%;
+    height: 45%;
+}
+/*--------------MENU--------------*/
+
+.menu{
+    border: 1px solid black;
+
+    width: 60%;
+    border-radius: 9px;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 50px repeat(3,1fr);
+    grid-template-areas: 
+                " titulo titulo "
+                "uno dos"
+                "tres cuatro"
+                "cinco seis";
+}
+#title{
+    grid-area: titulo;
+}
+#lis1{
+    grid-area:uno  ;
+}
+#lis2{
+    grid-area: dos ;
+}
+#lis3{
+    grid-area:tres  ;
+}
+#lis4{
+    grid-area:  cuatro;
+}
+#lis5{
+    grid-area: cinco ;
+}
+#lis6{
+    grid-area: seis ;
+}
+
+.menu__titulo{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 2em;
+    font-family: var(--fontU);
+    font-weight:500;
+}
+.fondo{
+    position: absolute;
+    z-index: -6;
+    width: 95%;
+    opacity: .1;
+    position: fixed;
+}
+
+.menu__titulo p{
+    margin: auto;
+}
+
+
+.menu__listas{
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(184, 181, 181,.1);
+}
+.menu__listas ul{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.menu__listas ul li{
+    list-style: none;
+    font-size: 1rem;
+    text-align: center;
+    margin: 5px auto;
+    padding: 3px;
+    border-radius: 9px;
+    letter-spacing: 5px;
+    font-family: var(--fontD);
+    background-color: rgba(218, 210, 210,.1);
+}
+.menu__listas ul li:hover{
+    color: white;
+}
+.menu__listas ul li > span{
+    color:rgb(122, 138, 139)
+}
+
+
+/*--------------CONTACTOS--------------*/
+.contactos{
+    background-image:url(/imagenes/fondoTabla.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    width: 95%;
+    height: 800px;
+    margin: 90px auto 30px auto;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    
+}
+
+.contactos__reservacion{
+    font-size: .8em;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(75, 71, 71, 0.8);
+
+    grid-area: reservacion;
+}
+.facturas{
+    width: 50%;
+    text-align: center;
+    font-size: .8em;
+    border-radius: 20px;
+    background-color: rgba(75, 71, 71, 0.8);
+
+    grid-area: facturas;
+
+}
+
+
+.redesSociales{
+    width: 40%;
+    height: 150px;
+    border-radius: 20px;
+    background-color: rgba(75, 71, 71, 0.8);
+
+    grid-area: redes;
+}
+.redesSociales p{
+    text-align: center;
+    font-size: .8em;
+}
+.redesSociales ul{
+    width: 60%;
+    margin: auto;
+    height: 50%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+.redesSociales ul li a{
+    font-size: 1.6rem;
+    color: white;
+}
+.contactos ul li a i{
+    transition: .5s;
+
+}
+.redesSociales ul li a i:hover{
+    transform: scale(1.2);
+    color: aqua;
+}
+
+
+
+/*--------------NOSOSTROS--------------*/
+
+.nosotros{
+    width: 95%;
+    height: 600px;
+    margin: 90px auto 30px auto;
+    background-image: url(/imagenes/fondoTabla.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+                "uno imagen"
+                "dos imagen";
+}
+
+.nosotros .texto{
+    width: 70%;
+    height: auto;
+    background-color: rgba(109, 255, 255,.3);
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.nosotros .texto p:first-child{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: var(--fontC);
+    letter-spacing: 2px;
+
+    grid-area: uno;
+}
+.texto p:nth-child(2),p:nth-child(3){
+    color: rgb(0, 0, 0);
+    font-family: var(--fontU);
+    font-size:.8rem ;
+
+    grid-area: dos;
+}
+
+.imag{
+    width: 90%;
+    height: 60%;
+
+    grid-area: imagen;
+}
+/*--------------UBICACION--------------*/
+
+.ubicacion{
+    width: 95%;
+    height: 800px;
+    margin: 90px auto 30px auto;
+    background-image:url(/imagenes/fondoTabla.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+                "mapa1 mapa2 mapa3";
+
+}
+.map1{
+    grid-area: mapa1;
+}
+.map2{
+    grid-area: mapa2;
+}
+.map3{
+    grid-area: mapa3;
+}
+.caja_conteiner{
+    margin: auto;
+    width: 90%;
+    height: 75%;
+    border-radius: 20px;
+    background-color: rgba(248, 248, 248,.6);
+}
+.caja_imagen{
+    width: 80%;
+    height: 40%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 10px;
+}
+.caja_imagen img{
+    width: 100%;
+    height: 100%;
+}
+.caja_direccion{
+    text-align: center;
+    font-family: var(--fontD);
+    font-size: .8rem;
+    width: 90%;
+    margin: auto;
+    color: rgb(87, 82, 82);
+}
+.caja_mapa{
+    width:90%;
+    height: 40%;
+    overflow: hidden;
+    margin: auto;
+}
+.caja_mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/*------------FOOTER----------*/
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: #4ae7ff;
+    width: 100%;
+    height: 10px;
+    font-size: .67rem;
+    
+}
+
+/*======================@MEDIA================*/
+/*======================@MEDIA================*/
+
+@media screen and (min-width: 320px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .cabecera{
+        width: 100%;
+        height: 110px;
+    }
+    .cabecera__logo{
+        width: 100%;
+        height: 100%;
+        
+    }
+    .cabecera__nombre{
+        font-size: 2.7rem;
+        background-color: #4ae7ff;
+    }
+    /*cambio del menu*/
+    .cabecera__navegacion{
+        display: none;
+    }
+
+    .cabecera__navegacionD{
+        height: 50px;
+        width: 100%;        
+        margin-top: 7px;
+    }
+    .cabecera__navegacionD ul{
+        width: 90%;
+        height: 40px;
+        padding: 0;
+        margin: 3px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .cabecera__navegacionD ul li{
+        background-color: var(--color);
+        list-style: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .cabecera__navegacionD ul li a{
+        font-size: 1.3rem;
+        color: #0f206c;
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+        text-decoration: none;
+        transition: .5s;
+    }
+    .cabecera__navegacionD ul li a:hover{
+        color: orange;
+        transform: scale(1.2);
+    }
+    .color{
+        color: orange;
+    }
+    .fondo{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        opacity: .2;
+    }
+
+    /*contenido del index*/
+
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,250px) 400px;
+        grid-template-areas: 
+                "video video"
+                "texto texto"
+                "imagenes imagenes";
+        row-gap: 2px;
+    }
+    .contenido__video{
+        width: 100%;
+        height: 100%;
+    }
+
+    .parrafo{
+        color: #0f206c;
+    }
+   
+
+
+
+    /*contenido del munu*/
+
+    .menu{
+        border: 1px solid black;
+        background-image: url(/imagenes/fondoTabla.JPG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        margin: 115px auto 30px auto;
+    
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 50px repeat(3,1fr);
+        grid-template-areas: 
+                    " titulo titulo "
+                    "uno dos"
+                    "tres cuatro"
+                    "cinco seis";
+        row-gap: 10px;
+    }
+    .menu__titulo{
+        margin: 10px auto;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: var(--fontU);
+        font-weight:bold;
+        color: #0f206c;
+    }
+    .menu__listas{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255,.4);
+    }
+    .menu__listas ul{
+        width: 80%;
+        height: 100%;
+    }
+    .menu__listas ul li{
+        font-size: .8rem;
+        font-weight: bold;
+        text-align: center;
+        color: #0f206c;
+        margin: 5px auto;
+        padding: 3px;
+        border-radius: 9px;
+        letter-spacing: 3px;
+        font-family: var(--fontD);
+    }
+
+    /*contenido de contactos*/
+
+    .contactos{
+        width: 100%;
+        height: calc(320px * 3);
+        margin-top: 115px;
+
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(3,320px);
+
+        grid-template-areas: 
+                    "reservacion"
+                    "facturas"
+                    "redes";
+        
+        row-gap: 2px;
+    }
+    .contactos__reservacion{
+        margin-top: 10px ;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .contactos__reservacion p{
+        margin: 10px;
+    }
+    .facturas{
+        width: 90%;
+        height: 70%;
+        margin: auto;
+        text-align: center;
+        font-size: .9em;
+        border-radius: 10px;
+        background-color: rgba(75, 71, 71, 0.8);    
+    }
+    .facturas p {
+        color: white;
+        margin: 5px;
+    }
+    .facturas form{
+        margin: 20px;
+    }
+
+    .redesSociales{
+        width: 90%;
+        height: 100px;
+        border-radius: 20px;
+        background-color: rgba(75, 71, 71, 0.8);
+        margin: auto;
+    }
+    .redesSociales p{
+        font-size: 1rem;
+    }
+    .redesSociales ul {
+        width: 100%;
+    }
+    .redesSociales ul li{
+        margin: 15px;
+    }
+    .redesSociales ul li a{
+        font-size: 2.5rem;
+        color: white;
+    }
+
+
+    /*contenido de nosotros*/
+
+    .nosotros{
+        margin-top: 115px;
+        width: 100%;
+        height: calc(300px* 3);
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(3,300px);
+        grid-template-areas: 
+                    "imagen"
+                    "uno"
+                    "dos"
+                    ;
+    }
+
+    .nosotros .texto{
+        width: 100%;
+        height:70%;
+        background-color: rgba(255, 255, 255,.4);
+    }
+    .imag{
+        width: 70%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .imag img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*contenido de ubicacion*/
+
+    .ubicacion{
+        width: 100%;
+        height: calc(350px * 3);
+        margin-top: 115px;
+    
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(3,350px);
+        grid-template-areas: 
+                    "mapa1" 
+                    "mapa2" 
+                    "mapa3";
+    
+    }
+    .caja_conteiner{
+        margin: auto;
+        width: 70%;
+        height: 90%;
+        border-radius: 20px;
+        background-color: rgba(248, 248, 248,.6);
+        overflow: hidden;
+    }
+    .caja_mapa{
+        width:100%;
+    }
+    .caja_mapa iframe{
+        margin-left: auto;
+        width: 100%;
+        height: 80%
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        background-color: #4ae7ff;
+        width: 100%;
+        height: 15px;
+        font-size: .67rem;
+        
+    }
+}
+
+/*@media para pantallas de 100px en adelante*/
+@media screen and (min-width:1000px) {
+        .cabecera__navegacionD{
+            display: none;
+        }
+        
+        .cabecera{
+            height: 85px;
+            background: var(--color);
+        }
+        .cabecera__navegacion{
+            
+            display: block;
+            margin-top:0px ;
+        }
+        .cabecera__navegacion ul{
+            height: 20px;
+        }
+        .color{
+            background-color: #0f206c;
+            padding: 3px;
+            color: white;
+            border-radius: 5px;
+        }
+        .cabecera__navegacion ul li a{
+            padding: 3px;
+            border-radius: 5px;
+            color: black;
+        }
+        .cabecera__navegacion ul li a:hover{
+            background-color: #0f206c;
+            color: white;
+        }
+         /*contenido del index*/
+    .contenido{
+        width: 95%;
+        margin: 120px auto 30px auto;
+        display: grid;
+    
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    
+        grid-template-areas: 
+                    "video imagenes"
+                    "texto imagenes";
+    }
+        /* menu */
+
+        .menu{
+            background-image: none;
+            border: 1px solid transparent;
+            width: 60%;
+            margin: 100px auto 30px auto;
+            border-radius: 9px;
+        
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 50px repeat(3,1fr);
+            grid-template-areas: 
+                        " titulo titulo "
+                        "uno dos"
+                        "tres cuatro"
+                        "cinco seis";
+        }
+        /*esta parte le da los fondos de tabla a los demas html*/
+       .otros{
+           background-image: url(/imagenes/fondoTabla.JPG);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       /*contactos*/
+       .contactos{
+        background-image: none;
+        width: 60%;
+        height: 800px;
+        margin: 90px auto 30px auto;
+        border-radius: 10px;
+
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(3,300px);
+    }
+    /*nosotros*/
+    .nosotros{
+        width: 95%;
+        height: 600px;
+        margin: 90px auto 30px auto;
+        background-image: none;
+        border-radius: 20px;
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+                    "uno imagen"
+                    "dos imagen";
+    }
+    .nosotros .texto{
+        width: 70%;
+        height: auto;
+        background-color: rgba(163, 167, 167,.5);
+        border-radius: 20px;
+        text-align: center;
+        margin: auto;
+    }
+    /*ubicacion*/
+    .ubicacion{
+        width: 95%;
+        height: 800px;
+        margin: 90px auto 30px auto;
+        background-image:none;
+    
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+                    "mapa1 mapa2 mapa3";
+    
+    }
+    .caja_conteiner{
+        margin: auto;
+        width: 90%;
+        height: 75%;
+        border-radius: 20px;
+        background-color: rgba(248, 248, 248,.6);
+    }
+
+.caja_imagen{
+    width: 80%;
+    height: 40%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 10px;
+}
+.caja_imagen img{
+    width: 100%;
+    height: 100%;
+}
+.caja_direccion{
+    text-align: center;
+    font-family: var(--fontD);
+    font-size: .8rem;
+    width: 90%;
+    margin: auto;
+    color: rgb(87, 82, 82);
+}
+.caja_mapa{
+    width:90%;
+    height: 40%;
+    overflow: hidden;
+    margin: auto;
+}
+.caja_mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+}
