@@ -1,5 +1,6 @@
 /*
-ULTIMA MODIFICACION:  AGREGANDO EL RESPOSIVE A TODAS LAS PAGINAS
+ULTIMA MODIFICACION: AGREGANDO GRID A CADA PAGINA.
+SIGUIENTE MODIFICACION: AGREGANDO EL RESPOSIVE A TODAS LAS PAGINAS
 */
 
 html{
@@ -94,6 +95,7 @@ body{
 .parrafo{
     width: 100%;
     height: 100%;
+    transition: .5s;
 
     grid-area: texto;
 }
@@ -115,6 +117,7 @@ body{
     border-radius: 5px;
     width: 45%;
     height: 45%;
+    transition: .5s;
 }
 /*--------------MENU--------------*/
 
@@ -427,7 +430,7 @@ footer{
     }
     .cabecera{
         width: 100%;
-        height: 110px;
+        height: 100px;
     }
     .cabecera__logo{
         width: 100%;
@@ -435,8 +438,10 @@ footer{
         
     }
     .cabecera__nombre{
-        font-size: 2.7rem;
+        height: 30px;
+        font-size: 2rem;
         background-color: #4ae7ff;
+        box-shadow: 0px 0px 15px 20px var(--color);
     }
     /*cambio del menu*/
     .cabecera__navegacion{
@@ -446,7 +451,7 @@ footer{
     .cabecera__navegacionD{
         height: 50px;
         width: 100%;        
-        margin-top: 7px;
+        margin-top: 30px;
     }
     .cabecera__navegacionD ul{
         width: 90%;
@@ -509,7 +514,17 @@ footer{
     .parrafo{
         color: #0f206c;
     }
-   
+    .contenido__imagen img:hover{
+        transform: scale(1.06);
+        box-shadow: 0px 0px 50px 6px rgba(93, 94, 94, 0.987);
+    }
+    .parrafo:hover{
+        box-shadow:0px 0px 50px 6px rgba(93, 94, 94, 0.987) ;
+        height: 80%;
+        width: 95%;
+        margin: auto;
+
+    }
 
 
 
@@ -719,8 +734,10 @@ footer{
         }
         
         .cabecera{
-            height: 85px;
+            height: 80px;
             background: var(--color);
+            box-shadow: 0 0 15px 20px var(--color);
+            z-index: 10;
         }
         .cabecera__navegacion{
             
@@ -746,6 +763,13 @@ footer{
             color: white;
         }
          /*contenido del index*/
+         .parrafo:hover{
+             box-shadow:0px 0px 50px 6px rgba(93, 94, 94, 0.987) ;
+             height: 70%;
+             width: 85%;
+             margin: auto;
+
+         }
     .contenido{
         width: 95%;
         margin: 120px auto 30px auto;
@@ -757,6 +781,11 @@ footer{
         grid-template-areas: 
                     "video imagenes"
                     "texto imagenes";
+    }
+    
+    .contenido__imagen img:hover{
+        transform: scale(1.06);
+        box-shadow: 0px 0px 50px 6px rgba(93, 94, 94, 0.987);
     }
         /* menu */
 
