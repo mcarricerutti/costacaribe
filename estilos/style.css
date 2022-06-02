@@ -732,7 +732,7 @@ footer{
 @media screen and (min-width:1000px) {
         .cabecera__navegacionD{
             display: none;
-        }
+        } /* desaparese el menu de descktop dando paso al menu mobile*/
         
         .cabecera{
             height: 80px;
@@ -741,7 +741,7 @@ footer{
             z-index: 10;
         }
         .cabecera__navegacion{
-            
+            /*se le da el paso al menu mobile*/
             display: block;
             margin-top:0px ;
         }
