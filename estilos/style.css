@@ -488,9 +488,10 @@ footer{
         color: orange;
     }
     .fondo{
-        width: 100%;
+        width: 200%;
         height: 100%;
         position: fixed;
+        left: -140px;
         opacity: .2;
     }
 
