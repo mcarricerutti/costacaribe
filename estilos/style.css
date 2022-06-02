@@ -743,7 +743,7 @@ footer{
         .cabecera__navegacion{
             /*se le da el paso al menu mobile*/
             display: block;
-            margin-top:0px ;
+            margin-top:20px ;
         }
         .cabecera__navegacion ul{
             height: 20px;
